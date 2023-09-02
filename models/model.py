@@ -203,10 +203,7 @@ class Model(nn.Module):
         super().__init__()
         self.args = args
         self.mode = mode
-        if self.args.dataset == 'cub':
-            self.sdim = 312
-        else:
-            self.sdim = 300
+        self.sdim = 300
 
         if self.args.model_type == 'res12':
             self.encoder = Res12()
